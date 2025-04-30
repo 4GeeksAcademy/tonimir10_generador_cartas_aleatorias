@@ -1,5 +1,33 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: green;
+}
+.carta{
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 4px;
+    position: relative;
+}
+.figura-bottom{
+    position: absolute;
+    top: 410px;
+    left: 236px;
+    font-size: 40px;
+}
+
+.figura-top{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    font-size: 40px;
+}
+
+.number{
+    position: absolute;
+    top: 180px;
+    left: 120px;
+    font-size: 90px;
 }
