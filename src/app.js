@@ -10,16 +10,43 @@ const _getRandom = (array) => {
   const random = Math.floor(Math.random()*array.length);
   return array[random];
 }
-window.onload = function() {
-  //write your code here
-  const figuraText = _getRandom(figuraList);
-  const numeroText = _getRandom(numeroList)
+function _setFiguratext(figuraText){
   const figuraTop = document.querySelector(".figura-top");
-  figuraTop.textContent = figuraText;
   const figuraBottom = document.querySelector(".figura-bottom");
-  figuraBottom.textContent = figuraText;
+  if(figuraText == '♥' || figuraText == '♦'){
+    figuraTop.style.color = 'red';
+    figuraBottom.style.color = 'red';
+  }
+  if(figuraText == '♠' || figuraText == '♣'){
+    figuraTop.style.color = 'black';
+    figuraBottom.style.color = 'black';
+  }
+   figuraTop.textContent = figuraText;
+   figuraBottom.textContent = figuraText;
+   return;
+}
+function _setNumerotext(numeroText){
   const numero = document.querySelector(".number");
+  if(numeroText == '10'){
+   numero.style.left = '80px';
+  }
+  if(numeroText != '10'){
+    numero.style.left = '110px';
+  }
   numero.textContent = numeroText;
-  
+  return;
+}
+/*window.onload = function() {
+  const figuraText = _getRandom(figuraList);
+  const numeroText = _getRandom(numeroList);
+  _setFiguratext(figuraText);
+  _setNumerotext(numeroText);
+};*/
 
-};
+const playGame = () => {
+  const figuraText = _getRandom(figuraList);
+  const numeroText = _getRandom(numeroList);
+  _setFiguratext(figuraText);
+  _setNumerotext(numeroText);
+}
+window.playGame = playGame;
