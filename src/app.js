@@ -36,13 +36,6 @@ function _setNumerotext(numeroText){
   numero.textContent = numeroText;
   return;
 }
-/*window.onload = function() {
-  const figuraText = _getRandom(figuraList);
-  const numeroText = _getRandom(numeroList);
-  _setFiguratext(figuraText);
-  _setNumerotext(numeroText);
-};*/
-
 const playGame = () => {
   const figuraText = _getRandom(figuraList);
   const numeroText = _getRandom(numeroList);
